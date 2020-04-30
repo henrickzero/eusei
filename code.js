@@ -51,3 +51,8 @@ var cy = window.cy = cytoscape({
 });
 
 
+cy.on('tap', 'node', function(evt){
+  var node = evt.target;
+  console.log( 'tapped ' + node.id() );
+  console.log( cy.elements());
+});
